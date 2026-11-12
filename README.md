@@ -17,7 +17,17 @@ Requer Python 3.10+ e ffmpeg.
 pip install -r requirements.txt
 ```
 
-## Uso
+## Abrir no computador (interface visual)
+1. Instale o **Python** (python.org, marque "Add to PATH") e o **ffmpeg**
+   - Windows: `winget install Gyan.FFmpeg`
+   - Mac: `brew install ffmpeg`
+2. Baixe este repositório (botão **Code → Download ZIP**) e descompacte
+3. Dê dois cliques em **`iniciar-windows.bat`** (Windows) ou **`iniciar-mac.command`** (Mac)
+4. O editor abre no navegador em `http://127.0.0.1:8765`: arraste o vídeo, escolha os ajustes e clique em **Editar vídeo**
+
+Os vídeos prontos ficam na pasta `output/`. Para legenda automática: `pip install faster-whisper`.
+
+## Uso por comandos
 ```bash
 # Analisar um vídeo (quanto silêncio será cortado)
 python -m editpro info bruto.mp4

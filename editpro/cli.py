@@ -49,7 +49,15 @@ def main(argv=None):
     i.add_argument("--silence-db", type=float, default=-35.0)
     i.add_argument("--min-silence", type=float, default=0.6)
 
+    w = sub.add_parser("web", help="abrir a interface visual no navegador")
+    w.add_argument("--port", type=int, default=8765)
+    w.add_argument("--no-browser", action="store_true")
+
     a = ap.parse_args(argv)
+    if a.cmd == "web":
+        from .web import serve
+        serve(a.port, open_browser=not a.no_browser)
+        return 0
     if a.cmd == "info":
         info = probe(a.input)
         print(f"{info['width']}x{info['height']}  {info['duration']:.1f}s  audio={info['has_audio']}")
