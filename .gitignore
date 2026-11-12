@@ -1,0 +1,6 @@
+input/*
+output/*
+!input/.gitkeep
+!output/.gitkeep
+*.mp4
+*.mov

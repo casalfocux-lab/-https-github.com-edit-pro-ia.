@@ -1,0 +1,2 @@
+# ffmpeg precisa estar instalado no sistema
+faster-whisper>=1.0  # opcional: legendas automaticas (--captions auto)
